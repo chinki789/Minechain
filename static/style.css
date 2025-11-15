@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f3f4f6;
+}
+
+.navbar {
+    background: #1a237e;
+    color: white;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 45px;
+    margin-right: 20px;
+}
+
+.nav-links a {
+    color: white;
+    margin-right: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.container {
+    padding: 30px;
+}
+
+.title {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    text-decoration: none;
+    color: #000;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.form {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+}
+
+.form input, .form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    background: #1a237e;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.table {
+    width: 100%;
+    background: white;
+    border-collapse: collapse;
+}
+
+.table th, .table td {
+    padding: 12px;
+    border: 1px solid #ddd;
+}
+
+.output-box {
+    background: #e8f5e9;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+.list li {
+    background: white;
+    padding: 10px;
+    margin-top: 8px;
+    border-radius: 8px;
+}

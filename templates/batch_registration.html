@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="title">Batch Registration & QR Generator</h2>
+
+<form method="POST" class="form">
+    <button type="submit" class="btn">Generate New Batch</button>
+</form>
+
+{% if qr_code %}
+<div class="output-box">
+    <h3>Batch QR Link:</h3>
+    <p>{{ qr_code }}</p>
+</div>
+{% endif %}
+
+<h3 class="subtitle">All Generated Batches</h3>
+
+<ul class="list">
+    {% for batch in batches %}
+    <li>Batch ID: {{ batch }}</li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="title">LCA / Carbon Emission Calculator</h2>
+
+<form method="POST" class="form">
+    <label>Diesel Consumption (liters)</label>
+    <input type="number" name="diesel" required>
+
+    <label>Electricity Usage (kWh)</label>
+    <input type="number" name="electricity" required>
+
+    <button type="submit" class="btn">Calculate</button>
+</form>
+
+{% if result %}
+<div class="output-box">
+    <h3>Total Carbon Emissions: <strong>{{ result }} kg CO₂</strong></h3>
+</div>
+{% endif %}
+
+{% endblock %}

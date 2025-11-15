@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MineChain</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>MineChain</h1>
+        <nav>
+            <a href="{{ url_for('show_dashboard') }}">Dashboard</a> |
+            <a href="{{ url_for('show_lca_calculator') }}">LCA Calculator</a> |
+            <a href="{{ url_for('show_supply_chain') }}">Supply Chain</a> |
+            <a href="{{ url_for('show_batch_registration') }}">Batch Registration</a> |
+            <a href="{{ url_for('generate_report_pdf') }}">Generate Report</a>
+        </nav>
+        <hr>
+    </header>
+
+    {% block content %}{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2 class="title">Supply Chain Ledger</h2>
+
+<form method="POST" class="form">
+    <label>Stage Name</label>
+    <input type="text" name="stage" required>
+
+    <label>Details / Notes</label>
+    <textarea name="details" required></textarea>
+
+    <button type="submit" class="btn">Add Stage</button>
+</form>
+
+<h3 class="subtitle">Recorded Supply Chain Stages</h3>
+
+<table class="table">
+    <tr>
+        <th>Stage</th>
+        <th>Details</th>
+    </tr>
+
+    {% for record in ledger %}
+    <tr>
+        <td>{{ record.stage }}</td>
+        <td>{{ record.details }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+{% endblock %}
