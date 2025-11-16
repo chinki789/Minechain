@@ -1,13 +1,40 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MineChain Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
 
-<h2 class="title">MineChain Dashboard</h2>
+    {% include 'navbar.html' %}
 
-<div class="grid">
-    <a href="/batch-registration" class="card">Batch QR Registration</a>
-    <a href="/supply-chain" class="card">Supply Chain Ledger</a>
-    <a href="/lca" class="card">LCA / Carbon Calculator</a>
-    <a href="/generate-report" class="card">Generate Export Report</a>
-</div>
+    <section class="center-box">
+        <h1 class="hero-title">MineChain Dashboard</h1>
 
-{% endblock %}
+        <div class="grid-cards">
+
+            <a href="/batch_registration" class="card">
+                <h3>Batch QR Registration</h3>
+                <p>Register new batches and generate unique QR codes.</p>
+            </a>
+
+            <a href="/supply_chain" class="card">
+                <h3>Supply Chain Ledger</h3>
+                <p>Track suppliers and material movement on blockchain.</p>
+            </a>
+
+            <a href="/lca_calculator" class="card">
+                <h3>LCA / Carbon Calculator</h3>
+                <p>Calculate carbon and environmental footprint.</p>
+            </a>
+
+            <a href="/generate_report" class="card">
+                <h3>Generate Export Report</h3>
+                <p>Create downloadable PDF supply chain reports.</p>
+            </a>
+
+        </div>
+    </section>
+
+</body>
+</html>

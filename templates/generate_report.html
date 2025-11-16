@@ -1,16 +1,20 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Report Generated | MineChain</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 
-<h2 class="title">Generate Export Report</h2>
+<body>
+    {% include 'navbar.html' %}
 
-<p>This module will generate consolidated PDF/CSV reports for:</p>
+    <section class="center-box">
+        <h1 class="hero-title">Report Ready</h1>
 
-<ul class="list">
-    <li>Registered batches</li>
-    <li>Supply chain stages</li>
-    <li>LCA/Carbon calculations</li>
-</ul>
+        <p>Your PDF report has been successfully created.</p>
 
-<button class="btn">Download Report (Coming Soon)</button>
+        <a href="/generate_report" class="btn-green">Download Report Again</a>
+    </section>
 
-{% endblock %}
+</body>
+</html>

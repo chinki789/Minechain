@@ -1,25 +1,36 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Batch Registration | MineChain</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 
-<h2 class="title">Batch Registration & QR Generator</h2>
+<body>
+    {% include 'navbar.html' %}
 
-<form method="POST" class="form">
-    <button type="submit" class="btn">Generate New Batch</button>
-</form>
+    <section class="center-box">
+        <h1 class="hero-title">Batch QR Registration</h1>
 
-{% if qr_code %}
-<div class="output-box">
-    <h3>Batch QR Link:</h3>
-    <p>{{ qr_code }}</p>
-</div>
-{% endif %}
+        <form method="POST" class="form-box">
+            <label>Batch Number</label>
+            <input type="text" name="batch_no" required>
 
-<h3 class="subtitle">All Generated Batches</h3>
+            <label>Material</label>
+            <input type="text" name="material" required>
 
-<ul class="list">
-    {% for batch in batches %}
-    <li>Batch ID: {{ batch }}</li>
-    {% endfor %}
-</ul>
+            <label>Origin</label>
+            <input type="text" name="origin" required>
 
-{% endblock %}
+            <button class="btn-green" type="submit">Generate QR</button>
+        </form>
+
+        {% if message %}
+        <div class="result-box">
+            <h2>Success</h2>
+            <p>{{ message }}</p>
+        </div>
+        {% endif %}
+    </section>
+
+</body>
+</html>

@@ -1,32 +1,35 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supply Chain | MineChain</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 
-<h2 class="title">Supply Chain Ledger</h2>
+<body>
+    {% include 'navbar.html' %}
 
-<form method="POST" class="form">
-    <label>Stage Name</label>
-    <input type="text" name="stage" required>
+    <section class="center-box">
+        <h1 class="hero-title">Supply Chain Ledger</h1>
 
-    <label>Details / Notes</label>
-    <textarea name="details" required></textarea>
+        <form method="POST" class="form-box">
+            <label>Supplier</label>
+            <input type="text" name="supplier" required>
 
-    <button type="submit" class="btn">Add Stage</button>
-</form>
+            <label>Material</label>
+            <input type="text" name="material" required>
 
-<h3 class="subtitle">Recorded Supply Chain Stages</h3>
+            <label>Quantity</label>
+            <input type="text" name="quantity" required>
 
-<table class="table">
-    <tr>
-        <th>Stage</th>
-        <th>Details</th>
-    </tr>
+            <button class="btn-green" type="submit">Add Entry</button>
+        </form>
 
-    {% for record in ledger %}
-    <tr>
-        <td>{{ record.stage }}</td>
-        <td>{{ record.details }}</td>
-    </tr>
-    {% endfor %}
-</table>
-
-{% endblock %}
+        {% if supply_data %}
+        <div class="result-box">
+            <h2>Latest Entry</h2>
+            <p>{{ supply_data }}</p>
+        </div>
+        {% endif %}
+    </section>
+</body>
+</html>

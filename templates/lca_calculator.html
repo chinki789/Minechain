@@ -1,22 +1,36 @@
-{% extends "base.html" %}
-{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LCA Calculator | MineChain</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
 
-<h2 class="title">LCA / Carbon Emission Calculator</h2>
+<body>
+    {% include 'navbar.html' %}
 
-<form method="POST" class="form">
-    <label>Diesel Consumption (liters)</label>
-    <input type="number" name="diesel" required>
+    <section class="center-box">
+        <h1 class="hero-title">LCA / Carbon Calculator</h1>
 
-    <label>Electricity Usage (kWh)</label>
-    <input type="number" name="electricity" required>
+        <form method="POST" class="form-box">
+            <label>Material Quantity (kg)</label>
+            <input type="number" name="quantity" required>
 
-    <button type="submit" class="btn">Calculate</button>
-</form>
+            <label>Energy Used (kWh)</label>
+            <input type="number" name="energy" required>
 
-{% if result %}
-<div class="output-box">
-    <h3>Total Carbon Emissions: <strong>{{ result }} kg CO₂</strong></h3>
-</div>
-{% endif %}
+            <label>Transportation Distance (km)</label>
+            <input type="number" name="distance" required>
 
-{% endblock %}
+            <button class="btn-green" type="submit">Calculate</button>
+        </form>
+
+        {% if result %}
+            <div class="result-box">
+                <h2>Results</h2>
+                <p><b>Carbon:</b> {{ result.carbon }} kg CO₂</p>
+                <p><b>Water:</b> {{ result.water }} L</p>
+            </div>
+        {% endif %}
+    </section>
+</body>
+</html>

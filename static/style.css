@@ -1,101 +1,108 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
-    background: #f3f4f6;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f8fff8;
 }
 
+/* NAVBAR --------------------------------------------------- */
 .navbar {
-    background: #1a237e;
-    color: white;
-    padding: 15px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
-}
-
-.logo {
-    height: 45px;
-    margin-right: 20px;
-}
-
-.nav-links a {
+    background: #0a8f3c;
     color: white;
-    margin-right: 20px;
+    padding: 15px 40px;
+    font-size: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.navbar a {
     text-decoration: none;
-    font-weight: bold;
+    margin-left: 20px;
+    color: white;
+    font-weight: 500;
 }
 
-.container {
-    padding: 30px;
+.navbar a:hover {
+    color: #d4ffd4;
 }
 
-.title {
-    font-size: 28px;
-    margin-bottom: 20px;
+.nav-left {
+    font-size: 25px;
+    font-weight: 700;
 }
 
-.grid {
+/* CENTER CONTENT ------------------------------------------ */
+.center-box {
+    max-width: 900px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+.hero-title {
+    font-size: 42px;
+    font-weight: 700;
+    color: #0f7a2b;
+    margin-bottom: 40px;
+}
+
+/* GRID CARDS ---------------------------------------------- */
+.grid-cards {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
+    gap: 25px;
 }
 
 .card {
-    background: white;
     padding: 25px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     text-decoration: none;
-    color: #000;
-    font-size: 20px;
-    font-weight: bold;
+    color: black;
+    transition: 0.2s;
 }
 
-.form {
-    background: white;
-    padding: 25px;
-    border-radius: 10px;
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+/* FORM ----------------------------------------------------- */
+.form-box {
     width: 400px;
-    box-shadow: 0px 2px 8px rgba(0,0,0,0.1);
+    margin: auto;
+    text-align: left;
 }
 
-.form input, .form textarea {
+.form-box input {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #0c802f;
     margin-bottom: 15px;
 }
 
-.btn {
-    background: #1a237e;
-    color: white;
-    padding: 12px 20px;
-    border: none;
+.btn-green {
     width: 100%;
+    padding: 12px;
+    background: #0a8f3c;
+    border: none;
+    color: white;
+    font-size: 18px;
     border-radius: 8px;
     cursor: pointer;
 }
 
-.table {
-    width: 100%;
-    background: white;
-    border-collapse: collapse;
+.btn-green:hover {
+    background: #0c7433;
 }
 
-.table th, .table td {
-    padding: 12px;
-    border: 1px solid #ddd;
-}
-
-.output-box {
-    background: #e8f5e9;
-    padding: 15px;
-    border-radius: 10px;
-    margin-top: 20px;
-}
-
-.list li {
-    background: white;
-    padding: 10px;
-    margin-top: 8px;
+/* RESULT BOX ---------------------------------------------- */
+.result-box {
+    margin-top: 30px;
+    padding: 20px;
+    background: #e8ffe8;
+    border-left: 5px solid #0a8f3c;
     border-radius: 8px;
 }
