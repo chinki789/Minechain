@@ -56,13 +56,15 @@ Handling batch relationships in a simple but traceable manner
 🔹 Multi-user roles (Admin / Supplier / Auditor)
 🔹 Cloud database integration (PostgreSQL, Firebase)
 
+
 ⚡ How to Run
 git clone https://github.com/chinki789/Minechain.git
 cd Minechain
 pip install -r requirements.txt
 python main.py
 
-
 For deployment on Render:
-
 gunicorn main:app
+
+
+
