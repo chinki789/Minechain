@@ -1,4 +1,6 @@
 ⚡ MineChain – Blockchain-Inspired Supply Chain & LCA Dashboard
+
+
 📌 Problem Statement
 
 Mining supply chains face challenges like poor traceability, manual record-keeping, lack of transparency, and difficulty generating standardized sustainability reports.
@@ -44,6 +46,8 @@ Deployment: Render
 🔹 Multi-user login system with roles (Admin, Auditor, Supplier)
 
 ⚡ How to Run Locally
+
+
 git clone https://github.com/chinki789/Minechain.git
 cd Minechain
 pip install -r requirements.txt
